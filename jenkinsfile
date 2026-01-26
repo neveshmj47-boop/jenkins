@@ -8,7 +8,8 @@ stages{
 	}
 	stage('Build'){
                 steps{
-                        echo "Build success"
+			sh 'mkdir -p build'
+                        sh 'echo build successfull > build/result.txt'
                 }
         }	
 	stage('Test'){
